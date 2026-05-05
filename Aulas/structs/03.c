@@ -14,12 +14,14 @@ Faça um programa que leia 2 pontos e implemente uma única função que:
 -> Retorne a soma dos pontos
 */
 
-struct tipoPonto {
+struct tipoPonto
+{
     int x;
     int y;
 };
 
-void calcularOperacoes(struct tipoPonto p1, struct tipoPonto p2, struct tipoPonto *soma, struct tipoPonto *mult) {
+void calculaOperacoes(struct tipoPonto p1, struct tipoPonto p2, struct tipoPonto *soma, struct tipoPonto *mult) {
+
     soma->x = p1.x + p2.x;
     soma->y = p1.y + p2.y;
 
@@ -28,20 +30,20 @@ void calcularOperacoes(struct tipoPonto p1, struct tipoPonto p2, struct tipoPont
 }
 
 int main() {
+
     struct tipoPonto ponto1, ponto2;
     struct tipoPonto resultadoSoma, resultadoMult;
 
-    printf("Digite as coordenadas do Ponto 1 (x y): ");
+    printf("Posição do ponto 1 (X Y): ");
     scanf("%d %d", &ponto1.x, &ponto1.y);
+    printf("Posição do ponto 2 (X Y): ");
+    scanf("%d %d", ponto2.x, ponto2.y);
 
-    printf("Digite as coordenadas do Ponto 2 (x y): ");
-    scanf("%d %d", &ponto2.x, &ponto2.y);
+    calculaOperacoes(ponto1, ponto2, &resultadoSoma, &resultadoMult);
 
-    calcularOperacoes(ponto1, ponto2, &resultadoSoma, &resultadoMult);
-
-    printf("\n--- Resultados ---\n");
-    printf("Soma dos pontos: (%d, %d)\n", resultadoSoma.x, resultadoSoma.y);
-    printf("Multiplicacao dos pontos: (%d, %d)\n", resultadoMult.x, resultadoMult.y);
+    printf("\nResultados:\n");
+    printf("Soma dos pontos: (%d %d)\n", resultadoSoma.x, resultadoSoma.y);
+    printf("Multiplicação: (%d %d)\n", resultadoMult.x, resultadoMult.y);
 
     return 0;
 }
