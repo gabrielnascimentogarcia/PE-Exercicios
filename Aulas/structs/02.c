@@ -2,7 +2,7 @@
 
 /*
 Faça um programa que contenha uma função que receba duas
-estruturas do tido dma, cada uma representando uma data
+estruturas do tipo dma, cada uma representando uma data
 válida, e que devolva o número de dias que decorreram entre as
 duas datas.
 struct dma {
